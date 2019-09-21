@@ -1,12 +1,16 @@
 import React from "react";
+import ToDo from "../components/todo/todo.components";
 
 class ToDoList extends React.Component {
   render() {
+    let todos = this.props.todos;
+    
     return (
       <div>
         <ul>
-          <li>Learn React</li>
-          <li>Watch WWE</li>
+        {
+          todos.map(todo => <ToDo key={todo.id} task={todo.name})
+        }
         </ul>
       </div>
     );
