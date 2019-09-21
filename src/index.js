@@ -1,15 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ToDoList from "./components/todo-list/todo-list.components";
 
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h3>To Do Application</h3>
+        <ToDoList />
+      </div>
+    );
+  }
 }
 
 const rootElement = document.getElementById("root");
